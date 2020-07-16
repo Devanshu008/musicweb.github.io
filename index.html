@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Darshan Raval's Songs Playlist</a>
+
+        </div>
+    </nav>
+
+    <header class="container my-2">
+        <div class="row">
+            <div class="col-xxl-12 text-center my-5">
+                <h1>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-music-note-beamed mr-1"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                        <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                    </svg>
+                    Music Library
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-music-note-beamed"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                        <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                    </svg>
+                </h1>
+                <hr class="w-50 mx-auto" />
+
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row ">
+            <div class="col-xxl-4 col-md-4  col-10 mx-auto">
+
+                <figure class="song  i1 w1 a">a</figure>
+            </div>
+          
+            <div class="col-xxl-4 col-md-4 col-10 mx-auto ">
+
+                <figure class="song i5 w1 e">e</figure>
+            </div>
+          
+            <div class="col-xxl-4 col-md-4 col-10 mx-auto ">
+
+                <figure class="song i5 w1 g">g</figure>
+            </div>
+            <div class="col-xxl-6 col-md-6 col-10 mx-auto ">
+
+                <figure class="song i5 w1 h">h</figure>
+            </div>
+            <div class="col-xxl-6 col-md-6 col-10 mx-auto ">
+
+                <figure class="song i5 w1 i">i</figure>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-secondary text-center text-white ">
+        <p>@copyright Devanshu G</p>
+
+    </footer>
+
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var divlength = document.querySelectorAll('.song').length;
+        console.log(divlength);
+        for (var i = 0; i < divlength; i++) {
+            var demo = document.querySelectorAll('.song')[i].addEventListener('click', playsong); 
+             var demo = document.querySelectorAll('.song')[i].addEventListener('dblclick', pausesong);
+        }
+        var song1 = new Audio();
+        song1.src = "mp3/Asal Mein - Darshan Raval.mp3";
+
+     
+        var song5 = new Audio();
+        song5.src = "mp3/Kaash Aisa Hota - Darshan Raval - PagalSongs.com.mp3";
+      
+        var song7 = new Audio();
+        song7.src = "mp3/Tu Mileya - Darshan Raval.mp3";
+        var song8 = new Audio();
+        song8.src = "mp3/Tu-Dua-Hai-Darshan-Raval.mp3";
+        var song9 = new Audio();
+        song9.src = "mp3/Ye Baarish-(Mr-Jatt.com).mp3";
+        function playsong() {
+
+            var songId = this.innerHTML;
+            console.log(songId);
+            switch (songId) {
+                case "a":
+               
+               
+                song5.pause();
+              
+                song7.pause();
+                song8.pause();
+                song9.pause();
+                    song1.play();
+                  
+                    break;
+
+              
+                case "e":
+               
+                song5.play();
+               
+                song7.pause();
+                song8.pause();
+                song9.pause();
+                    song1.pause();
+                    break;
+              
+                case "g":
+               
+                song5.pause();
+              
+                song7.play();
+                song8.pause();
+                song9.pause();
+                    song1.pause();
+                    break;
+                case "h":
+               
+                song5.pause();
+               
+                song7.pause();
+                song8.play();
+                song9.pause();
+                    song1.pause();
+                    break;
+                case "i":
+               
+                song5.pause();
+               
+                song7.pause();
+                song8.pause();
+                song9.play();
+                    song1.pause();
+                    break;
+                default:
+                    console.log("wrong input");
+                    break;
+            }
+        }
+       function pausesong(){
+           alert("hi");
+       }
+    </script>
+</body>
+
+</html>

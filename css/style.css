@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.i1 , .i3 , .i5{
+    height: 293px ;
+}
+.a{
+    background-image: url("../img/Asal mein.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.e{
+    background-image: url("../img/kaash aisha hota.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.g{
+    background-image: url("../img/tu dua hai.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.h{
+    background-image: url("../img/tu-mileya.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.i{
+    background-image: url("../img/ye-baarish.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+figure{
+    font-size: 0;
+   cursor: pointer;
+}
+.b,.d,.c,.f{
+    width: 450px;
+}
+h1{
+    color: #444444;
+}
+section div figure img{
+   border-radius: 15px;
+    cursor: pointer;
+    box-shadow:  2px 2px 5px gray ;
+}
+footer p{
+    margin-bottom: 0;
+
+}
+
+ 
